@@ -32,48 +32,43 @@ const EventPage = () => {
   };
 
   return (
-    <div className="container-bg ">
+    <div className="container-bg">
       <div className="blocks-container">
         <div className="container mx-auto mt-6">
           <div className="flex flex-wrap">
-            <div className="w-full p-10 flex">
-              <div className="event-box glass-bg rounded p-4 mb-4 flex-1 shadow-md text-center transform hover:scale-95 transition duration-300 hover:shadow-lg relative overflow-hidden glow-shadow">
+            <div className="w-full p-4 flex justify-center">
+              <div className="event-box glass-bg rounded p-4 mb-4 md:w-2/3 lg:w-3/5 shadow-md text-center transform hover:scale-95 transition duration-300 hover:shadow-lg relative overflow-hidden glow-shadow">
                 <div className="mb-4">
                   <img src={image} alt="Event" className="w-full h-auto rounded-lg" />
                 </div>
-                <button className="register-button subtle-glow bg-purple-500 hover:bg-purple-600 focus:outline-none text-white font-bold py-2 px-4 rounded-half shadow-md shadow-white align-center mr-12">
-                  Register
-                </button>
-                <button className="register-button subtle-glow bg-purple-500 hover:bg-purple-600 focus:outline-none text-white font-bold py-2 px-4 rounded-half shadow-md shadow-white align-center ml-12">
-                  Rulebook
-                </button>
-              </div>
-              <div className="event-box glass-bg rounded p-4 mb-4 flex-1 ml-4 w-full font-sans transform hover:scale-95 transition duration-300 hover:shadow-lg relative overflow-hidden glow-shadow">
                 {eventsData.map((event, index) => (
                   <div key={index} className="text-center">
-                    <h3 className="text-4xl font-extrabold mb-4 text-grey-500 animate-slow-pulse ">
+                    <h3 className="text-2xl font-extrabold mb-4 text-grey-500 animate-slow-pulse">
                       {event.title}
                     </h3>
-                    <p className="text-lg mb-4">
+                    <p className="text-lg mb-12">
                       ''Code all night, Ignite your passion for coding.''<br/>
                       Technex - Hackathon is the fourth version of University Hackathon in Nagpur under Technex, which is the Annual Technical Fest of St.Vincent Pallotti College of Engineering & Technology, Nagpur. It is a platform where hackers, developers, innovators, entrepreneurs, students can come together to create solutions to real-life problems. Developers can showcase their abilities, students can increase their network, innovators can create new solutions.
                     </p>
-                    <p className="text-lg font-bold mb-4">
-                      Price Amount: <span className="prize-amount">{event.amount}</span>
-                    </p>
-                    <div className='car'>
+                    <div className='car mb-12'>
                       <div className="flex flex-col md:flex-row">
-                        <div className="w-full md:w-1/2 mb-2 md:mb-0 text-left md:text-right">
+                        <div className="w-full md:w-1/2 mb-2 md:mb-0 text-center md:text-center ml-20 mr-1">
                           <p className="text-lg font-bold text-justify"><b>Date:</b> {event.date}</p>
                           <p className="text-lg font-bold  text-justify"><b>Venue:</b> {event.venue}</p>
                         </div>
-                        <div className="w-full md:w-1/2 text-left md:text-right">
+                        <div className="w-full md:w-1/2 text-center md:text-right">
                           <p className="text-lg font-bold text-justify"><b>Duration:</b> 12-14 Hours</p>
                           <p className="text-lg font-bold text-justify"><b>Price:</b> {event.price}</p>
                         </div>
                       </div>
                     </div>
                     {/* Add other event details here */}
+                    <button className="register-button subtle-glow bg-purple-500 hover:bg-purple-600 focus:outline-none text-white font-bold py-2 px-4 rounded-half shadow-md shadow-white align-center mx-12">
+                      Register
+                    </button>
+                    <button className="register-button subtle-glow bg-purple-500 hover:bg-purple-600 focus:outline-none text-white font-bold py-2 px-4 rounded-half shadow-md shadow-white align-center mx-12">
+                      Rulebook
+                    </button>
                   </div>
                 ))}
               </div>
